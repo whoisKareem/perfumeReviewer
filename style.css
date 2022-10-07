@@ -12,7 +12,8 @@ p {
 
 .big-grid {
     display: flex;
-    width: 1440px;
+    width: 500px;
+    border-radius: 30px;
 }
 
 .img-container {
@@ -23,6 +24,7 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 7px 0px 0px 7px;
 }
 
 .info-container {
@@ -31,6 +33,7 @@ p {
     background-color: white;
     padding: 20px;
     width: 50%;
+    border-radius: 0px 7px 7px 0px;
 }
 
 .p1 {
@@ -53,8 +56,38 @@ p {
     color: hsl(228, 12%, 48%);
 }
 
+.price-container {
+    display: flex;
+    align-items: center;
+}
+
 .p4 {
     font-family: 'Fraunces', serif;
     color: hsl(158, 36%, 37%);
     font-size: 30px;
+}
+
+.p44 {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    font-size: 14px;
+    margin-left: 17px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 10px 0px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.cart-icon {
+    margin-left: -17px;
+    margin-right: 10px;
 }
