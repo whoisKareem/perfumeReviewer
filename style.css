@@ -4,42 +4,75 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    /* width: 100vh; */
 }
 
 p {
     margin: 0;
 }
 
-.big-grid {
-    display: flex;
-    width: 500px;
-    border-radius: 30px;
+
+@media screen and (max-width:600px) {
+    .big-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-container {
+        width: 355px;
+    }
+
+    .perfume-img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 7px 7px 0px 0px;
+    }
+
+    .info-container {
+        display: grid;
+        row-gap: 20px;
+        background-color: white;
+        padding: 20px 30px 20px 30px;
+        width: calc(315px - 20px);
+        border-radius: 0px 0px 7px 7px;
+    }
 }
 
-.img-container {
-    width: 50%;
-}
-
-.perfume-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 7px 0px 0px 7px;
-}
-
-.info-container {
-    display: grid;
-    row-gap: 10px;
-    background-color: white;
-    padding: 20px;
-    width: 50%;
-    border-radius: 0px 7px 7px 0px;
+@media screen and (min-width:601px) {
+    .big-grid {
+        display: flex;
+        width: 520px;
+        border-radius: 30px;
+        flex-shrink: 0;
+    }
+    
+    .img-container {
+        width: 50%;
+    }
+    
+    .perfume-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 7px 0px 0px 7px;
+    }
+    
+    .info-container {
+        display: grid;
+        row-gap: 20px;
+        background-color: white;
+        padding: 30px;
+        width: 50%;
+        border-radius: 0px 7px 7px 0px;
+    }
 }
 
 .p1 {
     font-family: 'Montserrat', sans-serif;
     color: hsl(228, 12%, 48%);
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .p2 {
@@ -54,6 +87,7 @@ p {
     font-size: 14px;
     font-weight: 500;
     color: hsl(228, 12%, 48%);
+    line-height: 22px;
 }
 
 .price-container {
@@ -68,6 +102,7 @@ p {
 }
 
 .p44 {
+    font-family: 'Montserrat', sans-serif;
     color: hsl(228, 12%, 48%);
     text-decoration: line-through;
     font-size: 14px;
@@ -82,7 +117,7 @@ p {
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    padding: 10px 0px;
+    padding: 15px 0px;
     border-radius: 7px;
     cursor: pointer;
 }
